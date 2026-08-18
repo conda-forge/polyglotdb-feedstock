@@ -1,13 +1,13 @@
 {% set name = "polyglotdb" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f68750cf274c044d12631476639aac5a5d87aef1b6cb7c7a0aafff4ca94c7a67
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3bb51606a9936e612d3d7ad3e25678891f90bd85133f0b3d0e954ab937de9e5d
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
