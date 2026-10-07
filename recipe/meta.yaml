@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pgdb = polyglotdb.pgdb:main
@@ -21,6 +21,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - openjdk =21
@@ -29,6 +30,7 @@ requirements:
     - librosa
     - praatio
     - requests
+    - scipy
     - tqdm
     - neo4j-python-driver
     - __unix                      # [unix]
