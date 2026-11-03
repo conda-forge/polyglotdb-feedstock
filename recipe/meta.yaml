@@ -1,5 +1,5 @@
 {% set name = "polyglotdb" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3bb51606a9936e612d3d7ad3e25678891f90bd85133f0b3d0e954ab937de9e5d
+  sha256: 5cc38b365ff3a05331dc77c96a662e33bfdd5a5ea1c8945c5d65eef3d3a4deb2
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - pgdb = polyglotdb.pgdb:main
